@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6dd5fa, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+  transition: background 0.5s ease;
+}
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  color: #004080;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 0.8s ease;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  animation: fadeInUp 1s ease;
+}
+
+.input {
+  display: flex;
+  width: 100%;
+}
+
+.container input {
+  flex: 1;
+  height: 2.7rem;
+  padding: 0 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container input:focus {
+  border-color: #004080;
+  box-shadow: 0 0 8px rgba(0, 64, 128, 0.4);
+}
+
+.container button {
+  height: 2.7rem;
+  width: 55px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #004080, #0073e6);
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.container button:hover {
+  background: linear-gradient(135deg, #0059b3, #0099ff);
+  transform: scale(1.05);
+}
+
+/* WEATHER DISPLAY */
+.display {
+  text-align: center;
+}
+
+.city-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.date-time {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.weather-icon:hover {
+  transform: scale(1.1);
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  text-transform: capitalize;
+}
+
+.extra-info {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* ERROR MESSAGE */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .temperature {
+    font-size: 1.5rem;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translatey(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

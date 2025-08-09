@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1>Weather Application</h1>
+    <div class="container">
+      <!-- Input Section -->
+      <div class="input">
+        <input type="text" placeholder="Please enter the city" />
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <!-- weather information display section -->
+      <div class="display">
+        <h2 class="city-name"></h2>
+        <p class="date-time"></p>
+        <div class="weatherinfo">
+          <img class="weather-icon" src="" alt="Weather Icon" />
+          <p class="temperature"></p>
+          <p class="description"></p>
+        </div>
+
+        <div class="extra-info">
+          <p>Humidity: <span class="humidity">--%</span></p>
+
+          <p>Wind Speed: <span class="wind-speed">-- km/h</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
