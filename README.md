@@ -1,7 +1,7 @@
 Weather App
 
-A simple weather application built using HTML, CSS, and Vanilla JavaScript.
-It allows users to search for a city and view real-time weather information.
+Weather application built using HTML, CSS, and Vanilla JavaScript.
+You can search the weather information of your city in this app.
 
 Features
 
